@@ -1,0 +1,12 @@
+{
+  "name": "mdb5-free-standard",
+  "version": "1.0.0",
+  "description": "MDB5 Version: FREE 8.2.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

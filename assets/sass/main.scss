@@ -1,0 +1,271 @@
+@import "../sass/helpers/fonts";
+@import "../sass/helpers/variables";
+@import "../sass/helpers/mixens";
+body{
+    
+
+    font-family: 'Roboto', sans-serif;
+    
+    
+   
+}
+
+    
+.container-1{
+    
+    @media (min-width: 64em) { 
+        background-image: url('/assets/imgs/Path.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 74% 100%;
+        
+       
+        
+}
+
+header{
+       margin-bottom: 50px;
+    @media (min-width: 64em) {
+        .nav-item{
+
+            margin-left: 50px;
+           
+            }
+            margin-bottom: 100px;
+
+     }
+     
+    
+
+  nav{
+    
+    
+        background-color: transparent; 
+    
+    .nav-link{
+        @include nav_link;
+       }
+    
+      
+    }
+    h1{
+        @include landing;
+    }
+    .btn-buy-now {
+        @include button-styles(12px);
+        @media (min-width: 64em) {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    
+    }
+
+}
+    
+.introduce{
+    @include padding_left;
+    @media (min-width: 64em) {
+        padding-left: 85px;
+
+     }
+   
+    h2{
+        @include font-500 (50px,$primary-color);
+        
+
+    }
+    p{
+        @include font-400(18px,$secondary-color)
+       
+
+
+    }
+    .btn-purchase {
+        @include button-styles($font_16px); 
+        
+
+    }
+    .btn-learn-more {
+        @include font-500($font_16px,$primary-color);
+       
+        
+        border: 2px solid $button-bg-color;
+        border-radius: 2%;
+        padding-left: 25px;
+        padding-right: 25px;
+       
+
+    }
+    @media (min-width: 1200px) { 
+        .btn {
+          &.btn-purchase,
+          &.btn-learn-more {
+            width: 30%; 
+          }
+        }
+      }
+}
+}
+.container-2{
+
+    .row{
+        @include padding_left;
+        margin-top: 100px;
+    }
+    @media (min-width: 64em) {
+        padding-left: 90px;
+
+     }
+   
+   
+    .light-fast-header{
+        margin-top: 40px;
+        @include font-500-36;
+    }
+    .light-fast-p{
+        @include font-400($font_16px,$light-fast-p-color);
+        
+        @media (min-width: 64em) {
+            padding-right: 90px;
+        }
+
+        
+       
+    }
+    .title-goes-here-header{
+        @include font-500($font_16px,$primary-color);
+        
+     }
+     .title-goes-here-p{
+        @include font-400($font_12px,$title-goes-here-p-see-one-price-color);
+        
+        padding-right: 30px;
+        
+        }
+        .btn-purchase-small {
+            @include button-styles($font_14px); 
+        }
+
+}
+
+  .price-section{
+    background-color: rgba(231, 236, 255, .5);
+    padding-bottom: 100px;
+    
+    .curved-section {
+    
+        background-color:white;
+        padding: 100px 0;
+        clip-path: ellipse(70% 50% at center top);
+      }
+    .price-div{
+      
+      .price-suit-header{
+        @include font-500-36;
+    
+        }
+        .price-suit-p{
+            @include font-400($font_16px,$light-fast-p-color);
+        @media (min-width: 64em) {
+            padding-left: 350px;
+            padding-right: 350px;
+         }
+       
+        }
+        .price{
+            @include font-500($font_50px,$price-color);
+        
+        }
+        .ui-design-kit{
+            @include font-400($font_16px,$ui-design-kit-landing-color);
+        
+        }
+        .see-one-price-simple{
+            @include font-400($font_14px,$title-goes-here-p-see-one-price-color);
+        
+        }
+        .btn-purchase-small {
+            @include button-styles($font_14px); 
+        }
+
+    
+  }
+}
+footer{
+    
+    background-color: $footer-bg-color;
+    .row{
+        
+    @media (min-width: 64em) {
+        padding-left: 90px;
+        padding-right: 90px;
+
+     }
+    }
+   
+    
+    h5{
+        @include landing;
+    }
+    .your-company{
+        @include font-500($font_14px,$your-company-color);
+        
+    }
+    hr{
+        
+        color: $footer-hr-color;
+
+        
+        
+    }
+    .nav-item{
+        
+        margin-left: 10px;
+        margin-right: 10px;
+        
+        @media (min-width: 992px) { 
+           margin-right: 50px;
+           margin-left: 0;
+           
+           
+    }
+        
+    
+
+        
+        
+
+        .nav-link{
+            @include nav_link;
+            
+           }
+    }
+    
+
+    .btn{
+        @include button-styles($font_12px);
+       
+     
+    }  
+    .social{
+       
+        .fa {
+            margin-left: 20px;
+           
+          font-size: $font_16px;
+          width: 20px;
+          
+          text-decoration: none;
+          
+     
+          color: $social-icons-color;
+          
+      
+        
+          &:hover {
+            opacity: 0.7;
+          }
+      }
+    }
+    
+}
