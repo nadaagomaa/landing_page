@@ -9,86 +9,62 @@
     <link href="assets/sass/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid container-1 ">
-    <header class="container-fluid pt-3">
-        <div class="row">
-            <div class=" col-4 col-md-5 col-lg-5">
-                <nav class="navbar navbar-expand-lg ">
+    
+    <header class="container d-flex justify-content-between mt-3">
+        <nav class="navbar navbar-expand-lg text-start">
+            <div class="container-fluid">
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
         
-                    <div class="container-fluid ">
-                      
-                      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon "></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto   mb-2 mb-lg-0 ">
-                          <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="#">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link " href="#">Contact</a>
-                          </li>
+                <div class="offcanvas offcanvas-start w-25" data-bs-backdrop="static" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        
+                        <button type="button" class="btn-close text-reset border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-5" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
                         </ul>
-                      </div>        
-                   </div>
-                </nav>
-
+                    </div>
+                </div>
             </div>
-            <div class=" col-5 col-md-4 col-lg-4 ">
-                <h1 class="landing ms-4 ms-lg-5">
+        </nav>
+        
+        
+           
+
+
+            
+            <span class="landing text-center">     
                     Landing
-                    </h1>
+            </span>
+            <div class=" text-end">
+                <button class="btn btn-buy-now  text-light   mx-auto  "type="button" >Buy Now</button>
 
             </div>
-            <div class=" col-3 col-md-3 col-lg-3">
-                <button class="btn btn-buy-now  text-light  d-flex mx-auto "type="button" >Buy Now</button>
-
-            </div>
-        </div>
+        
 
     </header>
-    <div class="row">
-        <div class="col-md-6 col-lg-6 introduce order-md-1 order-2">
-            <h2  class="introduce-header">
-                Introduce Your Product <br>
-                Quickly & Effectivly
-                <br>
-            </h2>
-            <p class="introduce-p py-2 mb-5 ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                Aliquam sed venenatis augue. Sed cursus nibh dolor, nec fringilla<br> 
-                orci imperdiet non.Maecenas ut quam vitae enim ultrices faucibus.<br>
-                <br>
-                Mauris tristique tincidunt ultrices. Sed congue viverra dapibus.<br> 
-                Fusce mollis dui id augue efficitur feugiat.<br> 
-            </p>
-            <div class="d-flex mt-5">
-                <button  class="btn btn-purchase  text-light   me-4 "type="button">Purchase UI Kit</button>
-                <button  class="btn btn-learn-more  "type="button">Learn More</button>
-            </div>
-
-        </div>
-        <div class="col-md-6 col-lg-6 order-md-2 order-1 me-0 pe-0">
-            <img src="assets/imgs/Group.png" class="img-fluid mb-5 " alt="  ">
-
-        </div>
-
-    </div>
-</div>
-
-<div class="container-fluid container-2 ">
-    <div class="row">
-        <div class="col-md-6 col-lg-6 order-md-1 order-2">
-            <div class="light-fast-one">
     
-                <h2  class="light-fast-header">
-                    Light, Fast & Powerful
+    <div class="container container-1">
+        <div class="row">
+           
+            <div class="col-lg-6 introduce order-lg-1 order-2 mt-lg-5">
+                <h2  class="introduce-header">
+                    Introduce Your Product <br>
+                    Quickly & Effectivly
+                    <br>
                 </h2>
-                
-                <p class="light-fast-p">
+                <p class="introduce-p  ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
                     Aliquam sed venenatis augue. Sed cursus nibh dolor, nec fringilla<br> 
                     orci imperdiet non.Maecenas ut quam vitae enim ultrices faucibus.<br>
@@ -96,7 +72,40 @@
                     Mauris tristique tincidunt ultrices. Sed congue viverra dapibus.<br> 
                     Fusce mollis dui id augue efficitur feugiat.<br> 
                 </p>
-                <div class="d-flex">
+                <div class="d-flex mt-5">
+                    <button  class="btn btn-purchase  text-light   me-4 "type="button">Purchase UI Kit</button>
+                    <button  class="btn btn-learn-more  "type="button">Learn More</button>
+                </div>
+    
+            </div>
+            <div class="  col-lg-6 order-lg-2 order-1 text-center text-lg-end ">
+                <img src="assets/imgs/Group.png" class="img-fluid mb-5 group_img  " alt="  ">
+    
+            </div>
+    
+        </div>
+  
+   
+</div>
+<div class="container light-fast-container">
+    
+    <div class="row ">
+        <div class=" col-lg-6 order-lg-1 order-2 mt-5 pt-lg-3">
+            <div class="light-fast-one">
+    
+                <h2  class="light-fast-header mt-3">
+                    Light, Fast & Powerful
+                </h2>
+                
+                <p class="light-fast-p pb-lg-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                    Aliquam sed venenatis augue. Sed cursus nibh dolor, nec fringilla<br> 
+                    orci imperdiet non.Maecenas ut quam vitae enim ultrices faucibus.<br>
+                    <br>
+                    Mauris tristique tincidunt ultrices. Sed congue viverra dapibus.<br> 
+                    Fusce mollis dui id augue efficitur feugiat.<br> 
+                </p>
+                <div class="d-flex mt-lg-2">
                     <div >
                         <img src="assets/imgs/Icon.png" alt="" class="img-fluid mb-3">
                         <h3 class="title-goes-here-header">Title Goes Here</h3>
@@ -106,7 +115,7 @@
                         </p>
                     </div>
                     <div >
-                        <img src="assets/imgs/Icon.png" alt="" class="img-fluid title-icon mb-3">
+                        <img src="assets/imgs/Icon.png" alt="" class="img-fluid title-icon mb-3 ">
                         <h3 class="title-goes-here-header">Title Goes Here</h3>
                         <p class="title-goes-here-p">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
@@ -118,49 +127,22 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-6 order-md-2 order-1">
-            <img src="assets/imgs/undraw_mobile_login_ikmv.png" alt="" class=" img-fluid">
+        <div class=" col-lg-6 order-lg-2 order-1 text-center text-lg-end">
+            <img src="assets/imgs/undraw_mobile_login_ikmv.png" alt="" class=" img-fluid ">
         </div>
     </div>
-   
-    <div class="row row-light-fast-2">
-        <div class="col-md-6 col-lg-6">
-            <img src="assets/imgs/undraw_happy_news_hxmt.png" alt="" class=" img-fluid">
-            
-        </div>
-        <div class="col-md-6 col-lg-6">
-            <div class="light-fast-two">
-    
-                <h2  class="light-fast-header">
-                    Light, Fast & Powerful
-                </h2>
-                
-                <p class="light-fast-p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed venenatis augue. 
-                    Sed cursus nibh dolor, nec fringilla orci imperdiet non. Maecenas ut quam vitae enim 
-                    ultrices faucibus. Mauris tristique tincidunt ultrices. Sed congue viverra dapibus. 
-                    Fusce mollis dui id augue efficitur feugiat. <br>
-                    <br>
-                     Donec sodales erat nulla, in mattis orci egestas in. Suspendisse justo ligula, euismod ut purus quis,
-                     mattis efficitur neque. 
-                      
-                </p>
-               
-            </div>
-            
-        </div>
-    </div>
-   
 
-    <div class="row row-light-fast-2">
-        <div class="col-md-6 col-lg-6">
-            <img src="assets/imgs/undraw_social_influencer_sgsv.png" alt="" class=" img-fluid">
+</div>
+<div class="container light-fast-container">
+    <div class="row">
+        <div class=" col-lg-6 text-center text-lg-start">
+            <img src="assets/imgs/undraw_happy_news_hxmt.png" alt="" class=" img-fluid ">
             
         </div>
-        <div class="col-md-6 col-lg-6">
+        <div class=" col-lg-6 mt-5 ">
             <div class="light-fast-two">
     
-                <h2  class="light-fast-header">
+                <h2  class="light-fast-header mt-3">
                     Light, Fast & Powerful
                 </h2>
                 
@@ -179,13 +161,48 @@
             
         </div>
     </div>
+
+</div>
+<div class="container light-fast-container">
+    
     <div class="row row-light-fast-2">
-        <div class="col-md-6 col-lg-6">
-            <img src="assets/imgs/undraw_mention_6k5d.png" alt="" class=" img-fluid">
+        <div class=" col-lg-6 text-center text-lg-start ">
+            <img src="assets/imgs/undraw_social_influencer_sgsv.png" alt="" class=" img-fluid ">
             
         </div>
-        <div class="col-md-6 col-lg-6">
+        <div class=" col-lg-6 mt-5">
             <div class="light-fast-two">
+    
+                <h2  class="light-fast-header mt-3">
+                    Light, Fast & Powerful
+                </h2>
+                
+                <p class="light-fast-p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed venenatis augue. 
+                    Sed cursus nibh dolor, nec fringilla orci imperdiet non. Maecenas ut quam vitae enim 
+                    ultrices faucibus. Mauris tristique tincidunt ultrices. Sed congue viverra dapibus. 
+                    Fusce mollis dui id augue efficitur feugiat. <br>
+                    <br>
+                     Donec sodales erat nulla, in mattis orci egestas in. Suspendisse justo ligula, euismod ut purus quis,
+                     mattis efficitur neque. 
+                      
+                </p>
+               
+            </div>
+            
+        </div>
+    </div>
+
+
+</div>
+<div class="container light-fast-container">
+    <div class="row row-light-fast-2">
+        <div class=" col-lg-6 text-center text-lg-start ">
+            <img src="assets/imgs/undraw_mention_6k5d.png" alt="" class=" img-fluid ">
+            
+        </div>
+        <div class=" col-lg-6 mt-5">
+            <div class="light-fast-two mt-3">
     
                 <h2  class="light-fast-header">
                     Light, Fast & Powerful
@@ -208,49 +225,54 @@
         </div>
     </div>
     
-   
-   
+
 </div>
+
 <div class="container-fluid price-section px-0 text-center">
     <div class="curved-section ">
        
     </div>
-    <div class=" row price-div ">  
-        <h3 class="price-to-suit-header">
-        A Price To Suit Everyone
-        </h3>
-        <p class="price-suit-p">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed venenatis augue. Sed cursus nibh dolor,
-        nec fringilla orci imperdiet non. Maecenas ut quam vitae enim 
-        ultrices faucibus. Mauris tristique tincidunt ultrices. Sed congue viverra dapibus. 
-        </p>
-        <div class="my-5">
-            <h4 class="price"> $40</h4>
-            <p class="ui-design-kit">UI Design Kit</p>
-        </div>
-        <div >
-            <p class="see-one-price-simple">See, One Price, Simple</p>
+    <div class="container">
+        <div class=" price-div ">  
+            <h3 class="price-to-suit-header">
+            A Price To Suit Everyone
+            </h3>
+            <p class="price-suit-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed venenatis augue. Sed cursus nibh dolor,
+            nec fringilla orci imperdiet non. Maecenas ut quam vitae enim 
+            ultrices faucibus. Mauris tristique tincidunt ultrices. Sed congue viverra dapibus. 
+            </p>
+            <div class="my-5">
+                <h4 class="price"> $40</h4>
+                <p class="ui-design-kit">UI Design Kit</p>
+            </div>
+            <div >
+                <p class="see-one-price-simple">See, One Price, Simple</p>
+                
+            </div>
+            <div class="container d-flex justify-content-center align-items-center">
+            <button  class="btn btn-purchase-small  text-light px-lg-5 px-4 "type="button">Purchase Now</button>
+            
+             </div>
             
         </div>
-        <div class="container d-flex justify-content-center align-items-center">
-        <button  class="btn btn-purchase-small  text-light px-lg-5 px-4 "type="button">Purchase Now</button>
-        
-         </div>
-        
     </div>
+   
 </div>
 <footer class=" container-fluid  pt-3 ">
-        
-    <div class="row py-5">
+    <div class="container">
+            
+    <div class="row py-lg-5">
         <div class="col-md-3  text-md-start text-center order-2 order-md-1">
             <p class="your-company">©2023 Yourcompany</p>
 
         </div>
         <div class="  col-md-6 text-center order-1 order-md-2 ">
             
-            <h5 class="landing  text-center ">
+           <span class="landing">
             Landing
-            </h1>
+            </span>
+            
 
         </div>
         <div class="col-md-3 order-3 text-center text-md-end ">
@@ -291,6 +313,8 @@
             
 
         </div>   
+    </div>
+    
     </div>
 </footer>
 

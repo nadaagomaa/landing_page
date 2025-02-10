@@ -1,117 +1,128 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("../../font/Roboto-Bold.ttf") format("ttf");
-  font-weight: 700;
+  font-family: "Roboto-medium";
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("../../font/Roboto-SemiBold.ttf") format("ttf");
-  font-weight: 600;
+  font-family: "Roboto-regular";
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
   font-style: normal;
 }
+/*
 @font-face {
-  font-family: "Roboto";
-  src: url("../../font/Roboto-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../../font/Roboto-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../../font/RobotoCondensed-ExtraBold.ttf") "ttf";
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../../font/RobotoCondensed-Bold.ttf") format("ttf");
-  font-weight: 700;
-  font-style: normal;
-}
+    font-family: 'Roboto-ExtraBold';
+    src: url('../font/RobotoCondensed-ExtraBold.ttf')('truetype');
+
+   font-style:normal;
+
+
+}*/
 /*colors*/
 /*font sizes*/
 body {
   font-family: "Roboto", sans-serif;
 }
-
-@media (min-width: 64em) {
-  .container-1 {
+@media (min-width: 64rem) {
+  body {
     background-image: url("/assets/imgs/Path.png");
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: 74% 100%;
+    background-size: 67% 800px;
   }
 }
-.container-1 header {
+
+header {
   margin-bottom: 50px;
 }
-@media (min-width: 64em) {
-  .container-1 header {
-    margin-bottom: 100px;
-  }
-  .container-1 header .nav-item {
-    margin-left: 50px;
-  }
-}
-.container-1 header nav {
+header .navbar {
   background-color: transparent;
 }
-.container-1 header nav .nav-link {
+header .navbar .nav-link {
   color: #505F98;
   font-size: 14px;
-  font-weight: 400;
+  font-family: "Roboto-regular";
 }
-.container-1 header h1 {
+header .navbar .offcanvas {
+  background-color: #343a40;
+}
+header .navbar .offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+header .navbar .offcanvas .offcanvas-header .btn-close {
+  color: white;
+  opacity: 0.5;
+}
+header .navbar .offcanvas .offcanvas-header .btn-close:hover {
+  opacity: 1;
+}
+header .navbar .offcanvas-start.showing .nav-link,
+header .navbar .offcanvas-start.show .nav-link {
+  color: #505F98;
+  font-size: 14px;
+  font-family: "Roboto-regular";
+  color: rgba(255, 255, 255, 0.7);
+}
+header .navbar .offcanvas-start.showing .nav-link:hover,
+header .navbar .offcanvas-start.show .nav-link:hover {
+  color: white;
+}
+header .landing {
+  font-family: "Roboto";
   font-weight: 900;
   font-size: 26px;
   color: #37447e;
 }
-.container-1 header .btn-buy-now {
+header .btn-buy-now {
   background-color: #111b47;
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 12px;
   border-radius: 2%;
 }
 @media (min-width: 64em) {
-  .container-1 header .btn-buy-now {
+  header .btn-buy-now {
     padding-left: 60px;
     padding-right: 60px;
   }
 }
-@media (max-width: 1023px) {
-  .container-1 .introduce {
-    padding-left: 35px;
-  }
+
+.container-1 .group_img {
+  width: 472px;
+  height: 569px;
 }
-@media (min-width: 64em) {
-  .container-1 .introduce {
-    padding-left: 85px;
+@media (max-width: 768px) {
+  .container-1 .group_img {
+    width: 323px;
+    height: 390px;
   }
 }
 .container-1 .introduce h2 {
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 50px;
   color: #091133;
 }
+@media (max-width: 1199.2px) {
+  .container-1 .introduce h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 455px) {
+  .container-1 .introduce h2 {
+    font-size: 30px;
+  }
+}
 .container-1 .introduce p {
-  font-weight: 400;
+  font-family: "Roboto-regular";
   font-size: 18px;
   color: #505F98;
 }
 .container-1 .introduce .btn-purchase {
   background-color: #111b47;
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 16px;
   border-radius: 2%;
 }
 .container-1 .introduce .btn-learn-more {
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 16px;
   color: #091133;
   border: 2px solid #111b47;
@@ -125,49 +136,38 @@ body {
   }
 }
 
-.container-2 .row {
+.light-fast-container {
   margin-top: 100px;
 }
-@media (max-width: 1023px) {
-  .container-2 .row {
-    padding-left: 35px;
-  }
-}
-@media (min-width: 64em) {
-  .container-2 {
-    padding-left: 90px;
-  }
-}
-.container-2 .light-fast-header {
-  margin-top: 40px;
-  font-weight: 500;
+.light-fast-container .light-fast-header {
+  font-family: "Roboto-medium";
   font-size: 36px;
   color: #091133;
 }
-.container-2 .light-fast-p {
-  font-weight: 400;
+@media (max-width: 394px) {
+  .light-fast-container .light-fast-header {
+    font-size: 25px;
+  }
+}
+.light-fast-container .light-fast-p {
+  font-family: "Roboto-regular";
   font-size: 16px;
   color: #6F7CB2;
 }
-@media (min-width: 64em) {
-  .container-2 .light-fast-p {
-    padding-right: 90px;
-  }
-}
-.container-2 .title-goes-here-header {
-  font-weight: 500;
+.light-fast-container .title-goes-here-header {
+  font-family: "Roboto-medium";
   font-size: 16px;
   color: #091133;
 }
-.container-2 .title-goes-here-p {
-  font-weight: 400;
+.light-fast-container .title-goes-here-p {
+  font-family: "Roboto-regular";
   font-size: 12px;
   color: #5D6970;
-  padding-right: 30px;
+  padding-right: 20px;
 }
-.container-2 .btn-purchase-small {
+.light-fast-container .btn-purchase-small {
   background-color: #111b47;
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 14px;
   border-radius: 2%;
 }
@@ -182,40 +182,50 @@ body {
   -webkit-clip-path: ellipse(70% 50% at center top);
           clip-path: ellipse(70% 50% at center top);
 }
-.price-section .price-div .price-suit-header {
-  font-weight: 500;
+.price-section .price-div .price-to-suit-header {
+  font-family: "Roboto-medium";
   font-size: 36px;
   color: #091133;
 }
+@media (max-width: 394px) {
+  .price-section .price-div .price-to-suit-header {
+    font-size: 25px;
+  }
+}
 .price-section .price-div .price-suit-p {
-  font-weight: 400;
+  font-family: "Roboto-regular";
   font-size: 16px;
   color: #6F7CB2;
 }
 @media (min-width: 64em) {
   .price-section .price-div .price-suit-p {
-    padding-left: 350px;
-    padding-right: 350px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 .price-section .price-div .price {
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 50px;
   color: #222F65;
 }
+@media (max-width: 768px) {
+  .price-section .price-div .price {
+    font-size: 40px;
+  }
+}
 .price-section .price-div .ui-design-kit {
-  font-weight: 400;
+  font-family: "Roboto-regular";
   font-size: 16px;
   color: #37447e;
 }
 .price-section .price-div .see-one-price-simple {
-  font-weight: 400;
+  font-family: "Roboto-regular";
   font-size: 14px;
   color: #5D6970;
 }
 .price-section .price-div .btn-purchase-small {
   background-color: #111b47;
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 14px;
   border-radius: 2%;
 }
@@ -223,53 +233,48 @@ body {
 footer {
   background-color: #E7ECFF;
 }
-@media (min-width: 64em) {
-  footer .row {
-    padding-left: 90px;
-    padding-right: 90px;
-  }
-}
-footer h5 {
+footer .row .landing {
+  font-family: "Roboto";
   font-weight: 900;
   font-size: 26px;
   color: #37447e;
 }
-footer .your-company {
-  font-weight: 500;
+footer .row .your-company {
+  font-family: "Roboto-medium";
   font-size: 14px;
   color: #939EA4;
 }
-footer hr {
+footer .row hr {
   color: #CDD1D4;
 }
-footer .nav-item {
+footer .row .nav-item {
   margin-left: 10px;
   margin-right: 10px;
 }
 @media (min-width: 992px) {
-  footer .nav-item {
+  footer .row .nav-item {
     margin-right: 50px;
     margin-left: 0;
   }
 }
-footer .nav-item .nav-link {
+footer .row .nav-item .nav-link {
   color: #505F98;
   font-size: 14px;
-  font-weight: 400;
+  font-family: "Roboto-regular";
 }
-footer .btn {
+footer .row .btn {
   background-color: #111b47;
-  font-weight: 500;
+  font-family: "Roboto-medium";
   font-size: 12px;
   border-radius: 2%;
 }
-footer .social .fa {
+footer .row .social .fa {
   margin-left: 20px;
   font-size: 16px;
   width: 20px;
   text-decoration: none;
   color: #B0B8BC;
 }
-footer .social .fa:hover {
+footer .row .social .fa:hover {
   opacity: 0.7;
 }/*# sourceMappingURL=main.css.map */
