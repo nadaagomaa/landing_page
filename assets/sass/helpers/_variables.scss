@@ -1,4 +1,7 @@
-$font_family:'Roboto', sans-serif;
+$overlay-bg-color: rgba(0, 0, 0, 0.8); 
+$menu-width: 200px;                
+$animation-duration: 0.3s;          
+
 /*colors*/
 $primary-color:#091133;
 $secondary-color:#505F98;
@@ -12,8 +15,11 @@ $your-company-color:#939EA4;
 $footer-hr-color:#CDD1D4;
 $social-icons-color:#B0B8BC;
 /*font sizes*/
+$font-18px:18px;
 $font_16px:16px;
 $font_14px:14px;
 $font_12px:12px;
 $font_50px:50px;
-
+$w-992px:992px;
+$w-576px:576px;
+$w-350px:350px;

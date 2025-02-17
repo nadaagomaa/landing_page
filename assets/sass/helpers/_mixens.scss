@@ -1,5 +1,12 @@
 
 
+@mixin center-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
 
     @mixin button-styles($font-size) {
         background-color: $button-bg-color;
@@ -9,16 +16,25 @@
     }
     @mixin logo{
          
-       // font-family: 'Roboto-ExtraBold';//not work
-        font-family: 'Roboto';
-         font-weight: 900;
+        font-family: 'Roboto-extra-bold';
+        //font-family: 'Roboto-bold';
+         //font-weight: 900;
         font-size: 26px;
         color: $ui-design-kit-landing-color;
+        @media (max-width:$w-576px) {
+            font-size: 22px;
+            
+        }
+        @media (max-width:$w-350px) {
+            font-size: 20px;
+            
+        }
     }
     @mixin nav_link{
         color: $secondary-color;
         font-size: 14px;
         font-family: 'Roboto-regular';
+      
         
     }
    
@@ -37,3 +53,30 @@
     font-size: $font-size;
     color: $color;
    }
+   //////////////////
+   
+$container-padding-bottom: 1rem;
+$container-padding-left: 1.5rem;
+
+
+@mixin responsive-padding-left {
+  
+  padding-bottom: $container-padding-bottom;
+  padding-left: $container-padding-left;
+  
+  padding-right: 0; 
+
+  
+  @media (min-width: 768px) {
+    padding-left: $container-padding-left * 2;
+    
+    padding-bottom: $container-padding-bottom * 1.5;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: $container-padding-left * 3;
+    
+    padding-bottom: $container-padding-bottom * 2;
+  }
+}
+/////////////////////////////

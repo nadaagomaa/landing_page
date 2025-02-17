@@ -4,114 +4,190 @@
 body{
     
 
-    font-family: 'Roboto', sans-serif;
-    
-    
-    @media (min-width: 64rem) { 
-        background-image: url('/assets/imgs/Path.png');
-        background-position: top right;
-        background-repeat: no-repeat;
-        background-size: 67% 800px;
-       
-        
-       
-        
-}
+    font-family:  sans-serif;
    
 }
 header{
     
     margin-bottom: 50px;
+    span{
+        @media (max-width:$w-576px) {
+            font-size: $font_12px;
+            
+        }
+    }
 
-  
+   
   
 .navbar {
     background-color: transparent; 
-   .nav-link{
-    @include nav_link;
-   }
-   .offcanvas {
+    position: relative;
     
-    background-color: #343a40;
-       
-    
-     
-
-    .offcanvas-header {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+      
+    .nav-link{
         
-
-        .btn-close {
-           
-            color: white;
-            opacity: 0.5;
-
-            &:hover {
-                opacity: 1;
-            }
+            @include nav_link;
         }
-    }
-  
-   
-}
     
-  .offcanvas-start.showing, 
-  .offcanvas-start.show {
-    .nav-link {
-        @include nav_link;
-        color: rgba(255, 255, 255, 0.7);
-
-        &:hover {
-            color: white;
-        }
+       
+     
+       
+        
     }
-
+    
+   @media (max-width:$w-992px) {
+    .collapse.navbar-collapse {
+        position: fixed;  
+        top: 0;
+        left: -$menu-width; 
+        width: $menu-width;
+        height: 100%;
+        background-color: $overlay-bg-color;
+        z-index: 1000;      
+    
+        transition: left $animation-duration ease-in-out;
+        padding: 20px;
+        color: white;
+      
+        &.show {
+          left: 0; 
+        }
+      
+       
+        .navbar-header {
+          display: flex;
+          justify-content: end;
+          align-items: end;
+          padding-bottom: 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          margin-bottom: 15px;
+          
+      
+          .btn-close {
+            background: none;
+            border: none;
+            color:white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+      
+            &:hover {
+              opacity: 0.7;
+            }
+            
+          }
+        }
+        .navbar-nav {
+           
+        
+            .nav-item {
+              margin-bottom: 10px;
+        
+              .nav-link {
+                color: white;
+                padding: 10px 15px;
+                display: block;
+                &:hover {
+                  background-color: rgba(255, 255, 255, 0.1);
+                }
+              }
+            }
+          }
+  
+        }
+ 
+ .overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;  
+    display: none; 
+    opacity: 0;
+    transition: opacity  ease-in-out;
+  
+    &.show {
+      display: block;
+      opacity: 1;
+    }
   }
-   
- }
+}  
+    
 
 
+  ////////////////////////////
+  
+  ////////////////////////////
   
  .landing{
      @include logo;
  }
  .btn-buy-now {
-     @include button-styles(12px);
-     @media (min-width: 64em) {
+     @include button-styles($font_12px);
+     @media (min-width: 992px) {
          padding-left: 60px;
          padding-right: 60px;
-     }    
+     }   
+     @media (max-width:$w-576px) {
+        font-size: 10px;
+        
+     } 
+     
  
  }
 
 }
- 
+
 
     
 .container-1{
-   
+    @include responsive-padding-left;
+    background-image: url('/assets/imgs/Path.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 67% 100%;
     
-   .group_img{
-   width: 472px;
-   height: 569px;
-  @media (max-width:768px) {
-    width: 323px;
-    height: 390px;
+    
+    
+    
+   
+    margin-top: -150px;
+    padding-top: 150px;
+    display: flex;
+    .order-1 {
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center; 
+        .group_img {
+            
+            width: 50%;
+            height: auto;
+                @media (min-width:$w-992px) {
+                    width: 70%;
+                    height: auto;
+                    
+                }
+                
+            }
+        }
+    
     }
-   } 
+   
+
   
-   
-   
 
 
 
 .introduce{
-    //@include padding_left;
-    @media (min-width: 64em) {
-       // padding-left: 85px;
+    
+    @media (max-width:$w-992px) {
+        @include center-elements;
+       
 
      }
+     
    
     h2{
         @include font-Roboto-medium(50px,$primary-color);
@@ -123,11 +199,20 @@ header{
 
             font-size: 30px;
         }
+        @media (max-width:$w-350px){
+            font-size: 20px;
+            
+        }
 
     }
     p{
-        @include font-Roboto-Regular(18px,$secondary-color)
+        @include font-Roboto-Regular($font-18px,$secondary-color);
+        @media (max-width:$w-350px){
+            font-size: $font_14px;
+            
+        }
        
+      
 
 
     }
@@ -155,21 +240,48 @@ header{
           }
         }
       }
-}
+    @media (max-width:576px) {
+        .btn{
+            font-size: $font_14px;
+        }
+        
+    }
+    @media (max-width:350px) {
+        .btn{
+            font-size: 10px;
+        }
+        
+    }
+   
+
 }
 
+
 .light-fast-container{
+    &:has(h2, p){
+        @media (max-width:$w-992px) {
+            @include center-elements;
+           
+    
+         }
+       
+    }
     margin-top: 100px;
+
     .light-fast-header{
        
         @include font-Roboto-medium-36;
-        @media (max-width:394px) {
-
-            font-size: 25px;
+        @media (max-width:$w-350px){
+            font-size: $font_18px;
+            
         }
     }
     .light-fast-p{
         @include font-Roboto-Regular($font_16px,$light-fast-p-color);
+        @media (max-width:$w-350px){
+            font-size: $font_14px;
+            
+        }
     }
     .title-goes-here-header{
         @include font-Roboto-medium($font_16px,$primary-color);
@@ -184,6 +296,19 @@ header{
         }
         .btn-purchase-small {
             @include button-styles($font_14px); 
+            @media (max-width:$w-992px) {
+                @include center-elements;
+               
+        
+             }
+             @media (max-width:$w-576px) {
+                
+                    font-size: $font_12px;
+                
+                
+            }
+           
+           
         }
         
 }
@@ -202,9 +327,9 @@ header{
       
       .price-to-suit-header{
         @include font-Roboto-medium-36;
-        @media (max-width:394px) {
-
-            font-size: 25px;
+        @media (max-width:$w-350px){
+            font-size: $font_18px;
+            
         }
     
         }
@@ -214,6 +339,10 @@ header{
             padding-left: 150px;
             padding-right: 150px;
          }
+         @media (max-width:$w-350px){
+            font-size: $font_14px;
+            
+        }
        
         }
         .price{
@@ -234,6 +363,12 @@ header{
         }
         .btn-purchase-small {
             @include button-styles($font_14px); 
+            @media (max-width:$w-576px) {
+                
+                font-size: $font_12px;
+            
+            
+        }
         }
 
     
@@ -242,7 +377,7 @@ header{
 footer{
     
     background-color: $footer-bg-color;
-    .row{ 
+     
     .landing{
         @include logo;
        
@@ -258,28 +393,41 @@ footer{
         
         
     }
-    .nav-item{
-        
-        margin-left: 10px;
-        margin-right: 10px;
-        
-        @media (min-width: 992px) { 
-           margin-right: 50px;
-           margin-left: 0;
-           
-           
-    }
-        
-    
-
-        
-        
-
-        .nav-link{
-            @include nav_link;
+    ul{
+        @media (max-width:$w-992px) {
+            @include center-elements;
             
-           }
+        }
+        .nav-item{
+        
+            /*  margin-left: 10px;
+              margin-right: 10px;
+              
+              @media (min-width: $w-992px) { 
+                 margin-right: 50px;
+                 margin-left: 0;
+                 
+                 
+          }*/
+              
+          
+      
+              
+              
+      
+              .nav-link{
+                  @include nav_link;
+                  padding-left: 20px;
+                  @media (min-width:$w-992px) {
+        
+                    padding-right: 40px;
+                   }
+                  
+                  
+                 }
+          }
     }
+ 
     
 
     .btn{
@@ -288,8 +436,12 @@ footer{
      
     }  
     .social{
-       
+        @media (max-width:$w-992px) {
+            @include center-elements;
+            
+        }
         .fa {
+           
             margin-left: 20px;
            
           font-size: $font_16px;
@@ -308,4 +460,4 @@ footer{
       }
     }
     
-}}
+}
