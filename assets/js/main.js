@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.collapse.navbar-collapse');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
     const CloseMenuBtn = document.getElementById('closeMenuBtn');
     const overlayBackdrop = document.querySelector('.overlay-backdrop');
   

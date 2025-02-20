@@ -1,463 +1,261 @@
 @import "../sass/helpers/fonts";
 @import "../sass/helpers/variables";
 @import "../sass/helpers/mixens";
+//$enable-responsive-font-sizes: true; // Enable RFS
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/containers";
 body{
-    
-
-    font-family:  sans-serif;
-   
+   font-family:  sans-serif;  
 }
 header{
-    
-    margin-bottom: 50px;
-    span{
-        @media (max-width:$w-576px) {
-            font-size: $font_12px;
-            
-        }
-    }
-
-   
-  
-.navbar {
-    background-color: transparent; 
     position: relative;
-    
-      
-    .nav-link{
-        
+    z-index: 10;
+    margin-bottom: 50px;
+    .navbar {
+        background-color: transparent; 
+        position: relative;
+        .nav-link{
             @include nav_link;
         }
-    
-       
-     
-       
-        
-    }
-    
-   @media (max-width:$w-992px) {
-    .collapse.navbar-collapse {
-        position: fixed;  
-        top: 0;
-        left: -$menu-width; 
-        width: $menu-width;
-        height: 100%;
-        background-color: $overlay-bg-color;
-        z-index: 1000;      
-    
-        transition: left $animation-duration ease-in-out;
-        padding: 20px;
-        color: white;
-      
-        &.show {
-          left: 0; 
-        }
-      
-       
-        .navbar-header {
-          display: flex;
-          justify-content: end;
-          align-items: end;
-          padding-bottom: 15px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          margin-bottom: 15px;
-          
-      
-          .btn-close {
-            background: none;
-            border: none;
-            color:white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0;
-      
-            &:hover {
-              opacity: 0.7;
-            }
-            
-          }
-        }
-        .navbar-nav {
-           
-        
-            .nav-item {
-              margin-bottom: 10px;
-        
-              .nav-link {
-                color: white;
-                padding: 10px 15px;
-                display: block;
-                &:hover {
-                  background-color: rgba(255, 255, 255, 0.1);
+        .navbar-collapse {
+            @include media-breakpoint-down(lg) {     
+                position: fixed;  
+                top: 0;
+                left: -$menu-width; 
+                width: $menu-width;
+                height: 100%;
+                background-color: $overlay-bg-color;
+                z-index: 1000;      
+                transition: left $animation-duration ease-in-out;
+                padding: 20px;
+                color: white;  
+                &.show {
+                left: 0; 
                 }
-              }
-            }
-          }
-  
+                .navbar-header {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                margin-bottom: 15px;
+                    .btn-close {
+                        background: none;
+                        border: none;
+                        color:white;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        padding: 0;
+                        &:hover {
+                            opacity: 0.7;
+                        } 
+                    }
+                }
+                .navbar-nav {
+                    .nav-item {
+                        margin-bottom: 10px;
+                        .nav-link {
+                            color: white;
+                            padding: 10px 15px;
+                            display: block;
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.1);
+                            }
+                        }
+                    }
+                }
+            }  
         }
- 
- .overlay-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;  
-    display: none; 
-    opacity: 0;
-    transition: opacity  ease-in-out;
-  
-    &.show {
-      display: block;
-      opacity: 1;
     }
-  }
-}  
-    
-
-
-  ////////////////////////////
-  
-  ////////////////////////////
-  
- .landing{
-     @include logo;
- }
- .btn-buy-now {
-     @include button-styles($font_12px);
-     @media (min-width: 992px) {
-         padding-left: 60px;
-         padding-right: 60px;
-     }   
-     @media (max-width:$w-576px) {
-        font-size: 10px;
-        
-     } 
-     
- 
- }
-
-}
-
-
-    
+    .overlay-backdrop {
+        @include media-breakpoint-down(lg) { 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;  
+            display: none; 
+            opacity: 0;
+            transition: opacity  ease-in-out;
+            &.show {
+              display: block;
+              opacity: 1;
+            }   
+        }
+    }
+    .landing{
+        @include logo;
+    }
+    .btn-buy-now {
+        @include button-styles($font_12px);
+        @include media-breakpoint-up(lg) { 
+            padding-left: 60px;
+            padding-right: 60px;
+        }   
+        @include media-breakpoint-down(sm) {
+            font-size: 10px;
+        } 
+    }
+}   
 .container-1{
-    @include responsive-padding-left;
-    background-image: url('/assets/imgs/Path.png');
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: 67% 100%;
+   @include responsive-padding-left;
+    margin-left: auto;
     
-    
-    
-    
-   
+    @include media-breakpoint-up(lg) {
+        @include bg;    
+    }
     margin-top: -150px;
     padding-top: 150px;
     display: flex;
     .order-1 {
+        @include media-breakpoint-down(lg) {
+            @include bg;
+            margin-top: -150px;
+            padding-top: 150px; 
+        }
         display: flex; 
         justify-content: flex-end; 
         align-items: center; 
         .group_img {
-            
             width: 50%;
-            height: auto;
-                @media (min-width:$w-992px) {
-                    width: 70%;
-                    height: auto;
-                    
-                }
-                
+            @include media-breakpoint-up(lg) {
+                width: 70%;
+                height: auto;    
+            }            
+        }
+    }       
+    .introduce{
+        h1{
+            @include font-Roboto-medium($font_50px,$primary-color);
+            @include media-breakpoint-between(sm, lg) {font-size: 35px;  }
+            @include media-breakpoint-down(sm) { font-size: 26px };  
+        }
+        p{
+            @include font-Roboto-Regular($font-18px,$secondary-color);
+            @include media-breakpoint-down(sm) { font-size: $font_16px }      
+        }
+        .btn-purchase {
+            @include button-styles($font_16px); 
+            border: 2px solid $button-bg-color;
+        }
+        .btn-learn-more {
+            @include font-Roboto-medium($font_16px,$primary-color);
+            border: 2px solid $button-bg-color;
+            border-radius: 2%;
+            padding-left: 25px;
+            padding-right: 25px; 
+            @media (max-width:300px) {
+                margin-top: 15px;    
             }
         }
-    
-    }
-   
-
-  
-
-
-
-.introduce{
-    
-    @media (max-width:$w-992px) {
-        @include center-elements;
-       
-
-     }
-     
-   
-    h2{
-        @include font-Roboto-medium(50px,$primary-color);
-        @media (max-width:1199.2px) {
-
-            font-size: 40px;
-        }
-        @media (max-width:455px) {
-
-            font-size: 30px;
-        }
-        @media (max-width:$w-350px){
-            font-size: 20px;
-            
-        }
-
-    }
-    p{
-        @include font-Roboto-Regular($font-18px,$secondary-color);
-        @media (max-width:$w-350px){
-            font-size: $font_14px;
-            
-        }
-       
-      
-
-
-    }
-    .btn-purchase {
-        @include button-styles($font_16px); 
-        
-
-    }
-    .btn-learn-more {
-        @include font-Roboto-medium($font_16px,$primary-color);
-       
-        
-        border: 2px solid $button-bg-color;
-        border-radius: 2%;
-        padding-left: 25px;
-        padding-right: 25px;
-       
-
-    }
-    @media (min-width: 1200px) { 
         .btn {
-          &.btn-purchase,
-          &.btn-learn-more {
-            width: 30%; 
-          }
-        }
-      }
-    @media (max-width:576px) {
-        .btn{
-            font-size: $font_14px;
-        }
-        
-    }
-    @media (max-width:350px) {
-        .btn{
-            font-size: 10px;
-        }
-        
-    }
-   
+            @include media-breakpoint-up(lg) {
+                width: 27%; 
+            }  
+            @include media-breakpoint-down(sm) {
 
-}
-
-
+                font-size: $font_14px; 
+            } 
+        }  
+    }   
+}   
 .light-fast-container{
-    &:has(h2, p){
-        @media (max-width:$w-992px) {
-            @include center-elements;
-           
-    
-         }
-       
-    }
     margin-top: 100px;
-
-    .light-fast-header{
-       
+    .light-fast-header{  
         @include font-Roboto-medium-36;
-        @media (max-width:$w-350px){
-            font-size: $font_18px;
-            
-        }
     }
     .light-fast-p{
         @include font-Roboto-Regular($font_16px,$light-fast-p-color);
-        @media (max-width:$w-350px){
-            font-size: $font_14px;
-            
-        }
     }
     .title-goes-here-header{
         @include font-Roboto-medium($font_16px,$primary-color);
         
-     }
-     .title-goes-here-p{
+    }
+    .title-goes-here-p{
         @include font-Roboto-Regular($font_12px,$title-goes-here-p-see-one-price-color);
-        padding-right: 20px;
-        
-       
-        
-        }
-        .btn-purchase-small {
-            @include button-styles($font_14px); 
-            @media (max-width:$w-992px) {
-                @include center-elements;
-               
-        
-             }
-             @media (max-width:$w-576px) {
-                
-                    font-size: $font_12px;
-                
-                
-            }
-           
-           
-        }
-        
+        padding-right: 20px;    
+    }
+    .btn-purchase-small {
+        @include button-styles($font_14px); 
+        @include media-breakpoint-down(sm) {
+            font-size: $font_12px;
+        }   
+    }        
 }
-
-  .price-section{
+.price-section{
     background-color: rgba(231, 236, 255, .5);
     padding-bottom: 100px;
-    
+    @include media-breakpoint-down(md) {
+        padding-bottom: 70px;
+    }   
     .curved-section {
-    
         background-color:white;
         padding: 100px 0;
+        @include media-breakpoint-down(md) {
+            padding: 70px 0;
+        }   
         clip-path: ellipse(70% 50% at center top);
-      }
-    .price-div{
-      
+    }
+    .price-div{  
       .price-to-suit-header{
         @include font-Roboto-medium-36;
-        @media (max-width:$w-350px){
-            font-size: $font_18px;
-            
-        }
-    
         }
         .price-suit-p{
             @include font-Roboto-Regular($font_16px,$light-fast-p-color);
-        @media (min-width: 64em) {
-            padding-left: 150px;
-            padding-right: 150px;
-         }
-         @media (max-width:$w-350px){
-            font-size: $font_14px;
-            
-        }
-       
+            @include media-breakpoint-up(lg) {
+                padding-left: 150px;
+                padding-right: 150px;
+            }
         }
         .price{
             @include font-Roboto-medium($font_50px,$price-color);
-            @media (max-width:768px) {
-
-                font-size: 40px;
-            }
-        
+            @include media-breakpoint-down(sm) { font-size: 35px }   
         }
         .ui-design-kit{
             @include font-Roboto-Regular($font_16px,$ui-design-kit-landing-color);
-        
         }
         .see-one-price-simple{
             @include font-Roboto-Regular($font_14px,$title-goes-here-p-see-one-price-color);
-        
         }
         .btn-purchase-small {
-            @include button-styles($font_14px); 
-            @media (max-width:$w-576px) {
-                
-                font-size: $font_12px;
-            
-            
+            @include button-styles($font_14px);
+            @include media-breakpoint-down(sm) { font-size: $font_12px }   
         }
-        }
-
-    
-  }
+    }
 }
-footer{
-    
-    background-color: $footer-bg-color;
-     
+footer{ 
+    background-color: $footer-bg-color; 
     .landing{
-        @include logo;
-       
+        @include logo;  
     }
     .your-company{
-        @include font-Roboto-medium($font_14px,$your-company-color);
-        
+        @include font-Roboto-medium($font_14px,$your-company-color);    
     }
-    hr{
-        
-        color: $footer-hr-color;
-
-        
-        
+    hr{    
+        color: $footer-hr-color;    
     }
     ul{
-        @media (max-width:$w-992px) {
-            @include center-elements;
-            
-        }
         .nav-item{
-        
-            /*  margin-left: 10px;
-              margin-right: 10px;
-              
-              @media (min-width: $w-992px) { 
-                 margin-right: 50px;
-                 margin-left: 0;
-                 
-                 
-          }*/
-              
-          
-      
-              
-              
-      
-              .nav-link{
-                  @include nav_link;
-                  padding-left: 20px;
-                  @media (min-width:$w-992px) {
-        
-                    padding-right: 40px;
-                   }
-                  
-                  
-                 }
-          }
+            .nav-link{
+                @include nav_link;   
+            }
+        }
     }
- 
-    
-
     .btn{
         @include button-styles($font_12px);
-       
-     
     }  
     .social{
-        @media (max-width:$w-992px) {
-            @include center-elements;
-            
-        }
-        .fa {
-           
-            margin-left: 20px;
-           
-          font-size: $font_16px;
-          width: 20px;
-          
-          text-decoration: none;
-          
-     
-          color: $social-icons-color;
-          
-      
-        
-          &:hover {
+        .fa {   
+            margin:  5px 10px 10px 10px;
+            font-size: $font_16px;
+            width: 20px;
+            text-decoration: none;
+            color: $social-icons-color;
+            &:hover {
             opacity: 0.7;
           }
-      }
-    }
-    
+        }
+    }   
 }

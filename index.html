@@ -11,46 +11,14 @@
 <body>
     
     <header class=" container-lg d-flex justify-content-between  pt-3">
-        <!--
-        <nav class="navbar navbar-expand-lg text-start">
-            <div class="container-fluid">
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <div class="offcanvas offcanvas-start w-25" data-bs-backdrop="static" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        
-                        <button type="button" class="btn-close text-reset border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link px-lg-5" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        -->
         <nav class="navbar navbar-expand-lg text-md-start">
-        
-            
-              
-              <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="navbar-collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
               </button>
               
-              <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-                <div class="navbar-header">
-                    <button type="button" class="btn-close border-0 shadow-none  "  id="closeMenuBtn"></button>
+              <div class=" navbar-collapse "  id="navbarSupportedContent">
+                <div class="navbar-header  d-block d-lg-none text-end">
+                    <button type="button" class="btn-close border-0 shadow-none"  id="closeMenuBtn">x</button>
                     
                 </div>
                 <ul class="navbar-nav me-auto  ms-0 mb-2 mb-lg-0 ">
@@ -64,33 +32,24 @@
                     <a class="nav-link " href="#">Contact</a>
                   </li>
                 </ul>
-              </div>        
-              
+            </div>              
         </nav>
-        <div class="overlay-backdrop"></div>
-    
-
-            
+        <div class="overlay-backdrop d-lg-none"></div> 
             <span class="landing text-center">     
-                    Landing
+                Landing
             </span>
             <div class=" text-end">
                 <button class="btn btn-buy-now  text-light   mx-auto mt-2  "type="button" >Buy Now</button>
-
             </div>
         
-
     </header>
-    
     <div class=" container-1 d-flex flex-column flex-lg-row justify-content-between ">
-        
-           
-            <div class=" introduce order-2 order-lg-1 mt-lg-5 pe-2">
-                <h2  class="introduce-header">
+        <div class="col-lg-7 introduce order-2 order-lg-1 mt-lg-5 pe-2 text-lg-start text-center">
+                <h1  class="introduce-header">
                     Introduce Your Product <br>
                     Quickly & Effectivly
-                    <br>
-                </h2>
+                    
+                </h1>
                 <p class="introduce-p  ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam<br>
                     sed venenatis augue. Sed cursus nibh dolor, nec fringilla orci imper<br>
@@ -99,27 +58,19 @@
                     Mauris tristique tincidunt ultrices. Sed congue viverra dapibus.<br> 
                     Fusce mollis dui id augue efficitur feugiat. 
                 </p>
-                <div class="d-flex mt-3 mt-lg-5">
-                    <button  class="btn btn-purchase  text-light   me-4 "type="button">Purchase UI Kit</button>
-                    <button  class="btn btn-learn-more  "type="button">Learn More</button>
+                <div class=" mt-3 mt-lg-5 ">
+                    <button  class="btn btn-purchase  text-light me-md-4 "type="button">Purchase UI Kit</button>
+                    <button  class="btn btn-learn-more "type="button">Learn More</button>
                 </div>
     
-            </div>
+        </div>
             <div class="  order-1 order-lg-2 text-center text-lg-end ">
-                <img src="assets/imgs/Group.png" class="img-fluid mb-5 group_img  " alt="  ">
-    
+                <img src="assets/imgs/Group.png" class="img-fluid mb-5 group_img  " alt="group image">
             </div>
-    
-        
-  
-   
     </div>
 <div class="container light-fast-container">
-    
-    <div class="row ">
+     <div class="row text-center text-lg-start">
         <div class=" col-lg-6 order-lg-1 order-2 mt-5 pt-lg-3">
-            
-    
                 <h2  class="light-fast-header mt-3">
                     Light, Fast & Powerful
                 </h2>
@@ -133,8 +84,8 @@
                     Fusce mollis dui id augue efficitur feugiat. 
                 </p>
                 <div class="d-flex mt-lg-2">
-                    <div >
-                        <img src="assets/imgs/Icon.png" alt="" class="img-fluid mb-3">
+                    <div>
+                        <img src="assets/imgs/Icon.png" alt="title icon" class="img-fluid mb-3">
                         <h3 class="title-goes-here-header">Title Goes Here</h3>
                         <p class="title-goes-here-p">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
@@ -142,33 +93,26 @@
                         </p>
                     </div>
                     <div >
-                        <img src="assets/imgs/Icon.png" alt="" class="img-fluid title-icon mb-3 ">
+                        <img src="assets/imgs/Icon.png" alt="title icon " class="img-fluid title-icon mb-3 ">
                         <h3 class="title-goes-here-header">Title Goes Here</h3>
                         <p class="title-goes-here-p">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
                            sed venenatis augue. Sed cursus nibh dolor.
                         </p>
-                    </div>
-            
-                    
-                </div>
-            
+                    </div>   
+                </div>   
         </div>
         <div class=" col-lg-6 order-lg-2 order-1 text-center text-lg-end">
-            <img src="assets/imgs/undraw_mobile_login_ikmv.png" alt="" class=" img-fluid ">
+            <img src="assets/imgs/undraw_mobile_login_ikmv.png" alt="undrow mobile login" class=" img-fluid ">
         </div>
     </div>
-
 </div>
 <div class="container light-fast-container">
-    <div class="row">
-        <div class=" col-lg-6 text-center text-lg-start">
-            <img src="assets/imgs/undraw_happy_news_hxmt.png" alt="" class=" img-fluid ">
-            
+    <div class="row text-center text-lg-start">
+        <div class=" col-lg-6 ">
+            <img src="assets/imgs/undraw_happy_news_hxmt.png" alt="undraw-happy-news" class=" img-fluid ">    
         </div>
         <div class=" col-lg-6 mt-5 ">
-            
-    
                 <h2  class="light-fast-header mt-3">
                     Light, Fast & Powerful
                 </h2>
@@ -181,25 +125,17 @@
                     <br>
                      Donec sodales erat nulla, in mattis orci egestas in. Suspendisse justo ligula, euismod ut purus quis,
                      mattis efficitur neque. 
-                      
-                </p>
-               
-            
-            
+               </p>
         </div>
     </div>
-
 </div>
-<div class="container light-fast-container">
-    
-    <div class="row">
-        <div class=" col-lg-6 text-center text-lg-start ">
-            <img src="assets/imgs/undraw_social_influencer_sgsv.png" alt="" class=" img-fluid ">
-            
+<div class="container light-fast-container"> 
+    <div class="row text-center text-lg-start">
+        <div class=" col-lg-6 ">
+            <img src="assets/imgs/undraw_social_influencer_sgsv.png" alt=" undraw social influencer" class=" img-fluid ">    
         </div>
         <div class=" col-lg-6 mt-5">
             <div class="light-fast-two">
-    
                 <h2  class="light-fast-header mt-3">
                     Light, Fast & Powerful
                 </h2>
@@ -219,22 +155,17 @@
             
         </div>
     </div>
-
-
 </div>
 <div class="container light-fast-container">
-    <div class="row ">
-        <div class=" col-lg-6 text-center text-lg-start ">
-            <img src="assets/imgs/undraw_mention_6k5d.png" alt="" class=" img-fluid ">
-            
+    <div class="row text-center text-lg-start">
+        <div class=" col-lg-6 ">
+            <img src="assets/imgs/undraw_mention_6k5d.png" alt=" undraw mention" class=" img-fluid ">   
         </div>
-        <div class=" col-lg-6 mt-5 ">
-            <div class=" mt-3">
-    
+        <div class=" col-lg-6 mt-5  ">
+            <div class=" mt-3 d-flex flex-column text-center text-lg-start">
                 <h2  class="light-fast-header">
                     Light, Fast & Powerful
-                </h2>
-                
+                </h2> 
                 <p class="light-fast-p">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed venenatis augue. 
                     Sed cursus nibh dolor, nec fringilla orci imperdiet non. Maecenas ut quam vitae enim 
@@ -242,27 +173,21 @@
                     Fusce mollis dui id augue efficitur feugiat. <br>
                     <br>
                      Donec sodales erat nulla, in mattis orci egestas in. Suspendisse justo ligula, euismod ut purus quis,
-                     mattis efficitur neque. 
-                      
+                     mattis efficitur neque.        
                 </p>
-                
+                <div>
                 <button  class="btn btn-purchase-small  text-light "type="button">Purchase Now</button>
-                
-            </div>
-
-            
+                </div>   
+            </div>  
         </div>
     </div>
-    
-
 </div>
 
 <div class=" price-section px-0 text-center">
-    <div class="curved-section ">
-       
+    <div class="curved-section ">   
     </div>
-    <div class="container">
-        <div class=" price-div ">  
+    <div class="container ">
+        <div class=" price-div"> 
             <h3 class="price-to-suit-header">
             A Price To Suit Everyone
             </h3>
@@ -279,7 +204,7 @@
                 <p class="see-one-price-simple">See, One Price, Simple</p>
                 
             </div>
-            <div class="container d-flex justify-content-center align-items-center">
+            <div class="text-center ">
             <button  class="btn btn-purchase-small  text-light px-lg-5 px-4 "type="button">Purchase Now</button>
             
              </div>
@@ -288,70 +213,48 @@
     </div>
    
 </div>
-<footer class="">
+<footer >
     <div class="container  d-flex flex-column flex-lg-row justify-content-between pt-5 pb-4 ">
-            
-    
         <div class="  text-lg-start text-center order-2 order-lg-1 mt-3">
             <p class="your-company">©2023 Yourcompany</p>
-
         </div>
         <div class="  text-center order-1 order-lg-2 ">
             
            <span class="landing">
-            Landing
+                Landing
             </span>
-            
-
         </div>
         <div class=" order-3 text-center text-lg-end ">
             <button class="btn text-light "type="button" >Purchase Now</button>
-
         </div>
     </div>
     <hr class="container">
-    <div class=" container d-flex flex-column flex-lg-row justify-content-between py-3 ">
-        
-       
-            <ul class="list-unstyled  d-flex flex-row  ">
-                <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="#">Contact</a>
-                </li>
-              </ul>
-            
-                
-           
-        
-        <div class=" d-flex flex-row social ">
-            
+    <div class=" container d-flex flex-column flex-lg-row justify-content-lg-between align-items-center py-3  ">
+        <ul class="list-unstyled  d-flex flex-row text-center ">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-lg-5 px-4 " href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">Contact</a>
+            </li>
+        </ul>
+        <div class=" d-flex flex-row social ">      
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-linkedin"></a>
             <a href="#" class="fa fa-twitter"></a>
-            
-           
             <a href="#" class="fa fa-youtube"></a>
             <a href="#" class="fa fa-instagram"></a>
-            
-        
-        
-            
-
         </div>   
-    </div>
-    
-    
+    </div>     
 </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-      <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
     
 </body>
 </html>
