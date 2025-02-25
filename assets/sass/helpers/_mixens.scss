@@ -12,25 +12,40 @@
     align-items: center;
     text-align: center; 
 }
-
-    @mixin button-styles($font-size) {
+    @mixin btn-hover{
+        &:hover {
+            background-color: $btn-hover-color;
+            color: white;
+            
+        }
+    }
+    @mixin button-styles {
         background-color: $button-bg-color;
         font-family: 'Roboto-medium';
-        font-size: $font-size;
         border-radius: 2%;
+        transition: all 0.3s;
+        @include btn-hover;
+
     }
     @mixin logo{ 
         font-family: 'Roboto-extra-bold';
         font-size: 26px;
-        color: $ui-design-kit-landing-color;
+        color: $ui-design-kit-logo-color;
         @include media-breakpoint-down(sm) { 
             font-size: 22px;
         }
     }
     @mixin nav_link{
+        @include media-breakpoint-up(lg){
+            width: 70px;
+        }
         color: $secondary-color;
-        font-size: 14px;
-        font-family: 'Roboto-regular';   
+        font-size: $font_14px;
+        font-family: 'Roboto-regular';
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }   
+
     }
     @mixin font-Roboto-medium-36{
         font-family: 'Roboto-medium';
@@ -40,9 +55,8 @@
             font-size: 24px;
         }   
     }
-    @mixin font-Roboto-medium( $font-size,$color){
+    @mixin font-Roboto-medium($color){
         font-family: 'Roboto-medium';
-        font-size: $font-size;
         color: $color;
     }
    @mixin font-Roboto-Regular($font-size,$color){

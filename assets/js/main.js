@@ -18,4 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
     CloseMenuBtn.addEventListener('click', function() {
       toggleMenu();
     });});
-    
+    //body-overflow
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+      document.body.classList.toggle('overflow-hidden');
+  });
+  
+  document.getElementById('closeMenuBtn').addEventListener('click', function() {
+      document.body.classList.remove('overflow-hidden');
+  });
