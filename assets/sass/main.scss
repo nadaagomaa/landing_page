@@ -8,7 +8,25 @@ body{
     overflow: hidden;
    }
 }
-
+ul{
+    padding-inline-start: 0px;
+    .change-lang{
+        @include font-Roboto-medium($secondary-color);
+        font-size: $font_12px;
+        border: 2px solid $secondary-color;
+        border-radius: 46%;
+        text-decoration: none;
+        padding: 1px;
+        width: 22px;
+        &:hover{
+            background-color: $btn-hover-color;
+            color: white;
+        }
+        @include media-breakpoint-down(lg){
+            margin-inline-start: 45px;
+        }
+    }
+}
 header{
     position: relative;
     z-index: 10;
@@ -17,11 +35,14 @@ header{
         background-color: transparent; 
         position: relative;
         .nav-link{
-            @include nav_link;   
+            @include nav_link; 
         }
         .navbar-toggler{
             &:hover{
                 opacity: .7;
+            }
+            @include media-breakpoint-down(md){
+                font-size: $font_16px;
             }
         }
         .navbar-collapse {
@@ -31,13 +52,18 @@ header{
                 left: -$menu-width; 
                 width: $menu-width;
                 height: 100%;
-                //background-color: $overlay-bg-color;
                 background-color: white;
                 z-index: 1000;      
                 transition: left $animation-duration ease-in-out;
                 padding: 20px;
-                //color: white;  
+                //rtl
+                [dir="rtl"] & {
+                    right: -$menu-width;
+                    width: $menu-width;
+                    transition: right $animation-duration ease-in-out;
+                }   
                 &.show {
+                    [dir="rtl"] & {right: 0;}
                 left: 0; 
                 }
                 .navbar-header {
@@ -58,25 +84,21 @@ header{
                         } 
                     }
                 }
-                .navbar-nav {
+                .navbar-nav {    
                     @include media-breakpoint-down(lg)
                     {
                         .nav-item {
                             margin-bottom: 10px;
                             .nav-link {
                                 @include nav_link;
-                                //color: white;
                                 padding: 10px 15px;
-                                display: block;
-                               
+                                display: block;     
                             }
                         }
-
-                    }
-                  
+                    } 
                 }
-            }  
-        }
+            } 
+        }       
     }
     .overlay-backdrop {
         @include media-breakpoint-down(lg) { 
@@ -95,12 +117,17 @@ header{
               opacity: 1;
             }   
         }
+        //rtl
+        @include media-breakpoint-down(lg){
+            direction: rtl;
+            right: 0;
+        }
     }
     .Logo{
         @include logo;
     }
     .btn-dark {
-        @include button-styles;
+        @include dark-btn;
         @include media-breakpoint-up(lg) { 
             padding-left: 60px;
             padding-right: 60px;
@@ -112,23 +139,22 @@ header{
             font-size: 10px;
         } 
     }
-}   
+} 
 .banner{
-   
     @include media-breakpoint-up(lg) {
-        @include bg;    
+            @include bg;         
     }
     margin-top: -150px;
     padding-top: 150px;
     display: flex;
-    .order-1 {
+    .banner-img-div {
         @include media-breakpoint-down(lg) {
             @include bg;
             margin-top: -150px;
             padding-top: 150px; 
         }
-        display: flex; 
-        justify-content: flex-end; 
+        display: flex;
+        justify-content: flex-end; [dir="rtl"] & {justify-content: flex-start;}
         align-items: center; 
         .banner-img {
             width: 50%;
@@ -137,8 +163,8 @@ header{
                 height: auto;    
             }            
         }
-    }       
-    .banner-text{
+    }   
+    .banner-text{    
         @include media-breakpoint-up(xxl){
             width: calc(1320px/2);
         }
@@ -156,6 +182,10 @@ header{
         }
         @include media-breakpoint-up(lg){
             margin-left: auto;
+            [dir="rtl"] & {
+                margin-right: auto;
+            }
+           
         }
         @include media-breakpoint-down(sm){
             padding-inline: .75rem;     
@@ -173,19 +203,17 @@ header{
                 width: 67%; margin: auto;
             }
             @include media-breakpoint-down(sm) { 
-                font-size: 26px; 
-               width: 95% ; margin: auto;
-            }      
+                font-size: 24px; 
+               width: 85% ; margin: auto;
+            }  
         }
         p{
             @include font-Roboto-Regular($font-18px,$secondary-color);
             @include media-breakpoint-down(sm) { font-size: $font_16px }      
         }
         .btn-dark {
-            @include button-styles; 
+            @include dark-btn; 
             border: 2px solid $button-bg-color;
-
-
         }
         .btn-outline-dark {
             @include font-Roboto-medium($primary-color);
@@ -196,11 +224,9 @@ header{
             transition: all 0.3s;
             @media (max-width:300px) {
                 margin-top: 15px;    
-            }
-            
+            }    
         }
-        .btn {
-            
+        .btn {    
             @include media-breakpoint-up(lg) {
                 width: 32%; 
             }  
@@ -214,12 +240,19 @@ header{
             } 
             @include btn-hover;
             &:hover{
-                border-color: rgba(0, 0, 0, 0.3);
-                
+                border-color: rgba(0, 0, 0, 0.3);        
             }
         }  
-    }   
-}   
+    }  
+    //rtl .banner-text
+    [dir="rtl"] & {
+        .banner-text{
+            @include media-breakpoint-up(lg){
+            transform: scaleX(-1);
+            }
+        }
+    }
+}
 .features-section{
     margin-top: 100px;
     h2{  
@@ -236,22 +269,27 @@ header{
     }
     .title-icon-header{
         @include font-Roboto-medium($primary-color);
-        font-size: $font_16px;
-        
+        font-size: $font_16px;    
     }
     .title-icon-p{
         @include font-Roboto-Regular($font_12px,$icon-p-see-one-price-color);
-        padding-right: 20px;    
+       padding-inline-end: 20px;
     }
     .btn-dark {
-        @include button-styles; 
+        @include dark-btn; 
         @include media-breakpoint-up(sm) {
             font-size: $font_14px;
         }   
         @include media-breakpoint-down(sm) {
             font-size: $font_12px;
         }   
-    }        
+    } 
+    //rtl
+    [dir="rtl"] & {
+        img{
+            transform: scaleX(-1);
+        }
+    }     
 }
 .price-section{
     background-color: rgba(231, 236, 255, .5);
@@ -296,7 +334,7 @@ header{
             @include font-Roboto-Regular($font_14px,$icon-p-see-one-price-color);
         }
         .btn-dark {
-            @include button-styles;
+            @include dark-btn;
             @include media-breakpoint-up(sm) { font-size: $font_14px; }
             @include media-breakpoint-down(sm) { font-size: $font_12px; }   
         }
@@ -317,19 +355,14 @@ footer{
     ul{
         .nav-item{
             .nav-link{
-                @include nav_link;  
-                @include media-breakpoint-up(lg){
-                padding: 8px 0px 8px 8px;
-                }
-                @include media-breakpoint-down(lg){
-                    padding: 8px;
-                    }
-
+                @include nav_link;
+                width: 70px;  
+                padding: 8px;
             }
         }
     }
     .btn-dark{
-        @include button-styles;
+        @include dark-btn;
         font-size: $font_12px;
     }  
     .social-icons{

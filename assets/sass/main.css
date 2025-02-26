@@ -11994,6 +11994,29 @@ body .overflow-hidden {
   overflow: hidden;
 }
 
+ul {
+  padding-inline-start: 0px;
+}
+ul .change-lang {
+  font-family: "Roboto-medium";
+  color: #505F98;
+  font-size: 12px;
+  border: 2px solid #505F98;
+  border-radius: 46%;
+  text-decoration: none;
+  padding: 1px;
+  width: 22px;
+}
+ul .change-lang:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+@media (max-width: 991.98px) {
+  ul .change-lang {
+    margin-inline-start: 45px;
+  }
+}
+
 header {
   position: relative;
   z-index: 10;
@@ -12019,20 +12042,33 @@ header .navbar .nav-link:hover {
 header .navbar .navbar-toggler:hover {
   opacity: 0.7;
 }
+@media (max-width: 767.98px) {
+  header .navbar .navbar-toggler {
+    font-size: 16px;
+  }
+}
 @media (max-width: 991.98px) {
   header .navbar .navbar-collapse {
     position: fixed;
     top: 0;
-    left: -200px;
-    width: 200px;
+    left: -150px;
+    width: 150px;
     height: 100%;
     background-color: white;
     z-index: 1000;
     transition: left 0.3s ease-in-out;
     padding: 20px;
   }
+  [dir=rtl] header .navbar .navbar-collapse {
+    right: -150px;
+    width: 150px;
+    transition: right 0.3s ease-in-out;
+  }
   header .navbar .navbar-collapse.show {
     left: 0;
+  }
+  [dir=rtl] header .navbar .navbar-collapse.show {
+    right: 0;
   }
   header .navbar .navbar-collapse .navbar-header {
     display: flex;
@@ -12093,6 +12129,12 @@ header .navbar .navbar-toggler:hover {
     opacity: 1;
   }
 }
+@media (max-width: 991.98px) {
+  header .overlay-backdrop {
+    direction: rtl;
+    right: 0;
+  }
+}
 header .Logo {
   font-family: "Roboto-extra-bold";
   font-size: 26px;
@@ -12142,14 +12184,17 @@ header .btn-dark:hover {
     background-repeat: no-repeat;
     background-size: 67% 100%;
   }
+  [dir=rtl] .banner {
+    transform: scaleX(-1);
+  }
 }
-.banner .order-1 {
+.banner .banner-img-div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 @media (max-width: 991.98px) {
-  .banner .order-1 {
+  .banner .banner-img-div {
     background-image: url("/assets/imgs/Path.png");
     background-position: top right;
     background-repeat: no-repeat;
@@ -12157,12 +12202,18 @@ header .btn-dark:hover {
     margin-top: -150px;
     padding-top: 150px;
   }
+  [dir=rtl] .banner .banner-img-div {
+    transform: scaleX(-1);
+  }
 }
-.banner .order-1 .banner-img {
+[dir=rtl] .banner .banner-img-div {
+  justify-content: flex-start;
+}
+.banner .banner-img-div .banner-img {
   width: 50%;
 }
 @media (min-width: 992px) {
-  .banner .order-1 .banner-img {
+  .banner .banner-img-div .banner-img {
     width: 70%;
     height: auto;
   }
@@ -12195,6 +12246,9 @@ header .btn-dark:hover {
 @media (min-width: 992px) {
   .banner .banner-text {
     margin-left: auto;
+  }
+  [dir=rtl] .banner .banner-text {
+    margin-right: auto;
   }
 }
 @media (max-width: 575.98px) {
@@ -12231,8 +12285,8 @@ header .btn-dark:hover {
 }
 @media (max-width: 575.98px) {
   .banner .banner-text h1, .banner .banner-text .h1 {
-    font-size: 26px;
-    width: 95%;
+    font-size: 24px;
+    width: 85%;
     margin: auto;
   }
 }
@@ -12293,6 +12347,11 @@ header .btn-dark:hover {
 .banner .banner-text .btn:hover {
   border-color: rgba(0, 0, 0, 0.3);
 }
+@media (min-width: 992px) {
+  [dir=rtl] .banner .banner-text {
+    transform: scaleX(-1);
+  }
+}
 
 .features-section {
   margin-top: 100px;
@@ -12325,7 +12384,7 @@ header .btn-dark:hover {
   font-family: "Roboto-regular";
   font-size: 12px;
   color: #5D6970;
-  padding-right: 20px;
+  padding-inline-end: 20px;
 }
 .features-section .btn-dark {
   background-color: #111b47;
@@ -12346,6 +12405,9 @@ header .btn-dark:hover {
   .features-section .btn-dark {
     font-size: 12px;
   }
+}
+[dir=rtl] .features-section img {
+  transform: scaleX(-1);
 }
 
 .price-section {
@@ -12463,6 +12525,8 @@ footer ul .nav-item .nav-link {
   color: #505F98;
   font-size: 14px;
   font-family: "Roboto-regular";
+  width: 70px;
+  padding: 8px;
 }
 @media (min-width: 992px) {
   footer ul .nav-item .nav-link {
@@ -12471,16 +12535,6 @@ footer ul .nav-item .nav-link {
 }
 footer ul .nav-item .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.3);
-}
-@media (min-width: 992px) {
-  footer ul .nav-item .nav-link {
-    padding: 8px 0px 8px 8px;
-  }
-}
-@media (max-width: 991.98px) {
-  footer ul .nav-item .nav-link {
-    padding: 8px;
-  }
 }
 footer .btn-dark {
   background-color: #111b47;

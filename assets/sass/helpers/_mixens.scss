@@ -4,28 +4,22 @@
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 67% 100%;
-}
-@mixin center-elements {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
+    [dir="rtl"] &{    
+        transform: scaleX(-1);
+    }
 }
     @mixin btn-hover{
         &:hover {
             background-color: $btn-hover-color;
-            color: white;
-            
+            color: white;    
         }
     }
-    @mixin button-styles {
+    @mixin dark-btn {
         background-color: $button-bg-color;
         font-family: 'Roboto-medium';
         border-radius: 2%;
-        transition: all 0.3s;
+        transition: all $animation-duration;
         @include btn-hover;
-
     }
     @mixin logo{ 
         font-family: 'Roboto-extra-bold';
@@ -37,22 +31,13 @@
     }
     @mixin nav_link{
         @include media-breakpoint-up(lg){
-            width: 70px;
+            width: 70px;     
         }
         color: $secondary-color;
         font-size: $font_14px;
         font-family: 'Roboto-regular';
         &:hover {
             background-color: rgba(0, 0, 0, 0.3);
-        }   
-
-    }
-    @mixin font-Roboto-medium-36{
-        font-family: 'Roboto-medium';
-        font-size: 36px;
-        color: $primary-color;
-        @include media-breakpoint-down(sm) {
-            font-size: 24px;
         }   
     }
     @mixin font-Roboto-medium($color){
@@ -64,19 +49,3 @@
     font-size: $font-size;
     color: $color;
    }
- //responsive padding left 
-$container-padding-bottom: 1rem;
-$container-padding-left: 1.5rem;
-@mixin responsive-padding-left { 
-    padding-bottom: $container-padding-bottom;
-    padding-left: $container-padding-left;
-    padding-right: 0;  
-     @media (min-width: 768px) {
-        padding-left: $container-padding-left * 2;
-        padding-bottom: $container-padding-bottom * 1.5;
-    }
-    @media (min-width: 1200px) {
-    padding-left: $container-padding-left * 3;
-    padding-bottom: $container-padding-bottom * 2;
-    }
-}
