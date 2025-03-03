@@ -4,9 +4,10 @@
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 67% 100%;
-    [dir="rtl"] &{    
+    [dir="rtl"] & {
         transform: scaleX(-1);
     }
+    
 }
     @mixin btn-hover{
         &:hover {
@@ -25,12 +26,12 @@
         font-family: 'Roboto-extra-bold';
         font-size: 26px;
         color: $ui-design-kit-logo-color;
-        @include media-breakpoint-down(sm) { 
+        @media (max-width: 575.98px) { 
             font-size: 22px;
         }
     }
     @mixin nav_link{
-        @include media-breakpoint-up(lg){
+        @media (min-width: 992px){
             width: 70px;     
         }
         color: $secondary-color;
@@ -49,3 +50,8 @@
     font-size: $font-size;
     color: $color;
    }
+   
+
+  
+  
+  
