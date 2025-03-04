@@ -1,14 +1,8 @@
-
-@mixin bg{
-    background-image: url('/assets/imgs/Path.png');
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: 67% 100%;
+@mixin reverse {
     [dir="rtl"] & {
-        transform: scaleX(-1);
+      transform: scaleX(-1);
     }
-    
-}
+  }
     @mixin btn-hover{
         &:hover {
             background-color: $btn-hover-color;

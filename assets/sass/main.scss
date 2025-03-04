@@ -3,9 +3,6 @@
 @import "../sass/helpers/mixens";
 body{
    font-family:  sans-serif;
-   .overflow-hidden{
-    overflow: hidden;
-   }
 }
 ul{
     padding-inline-start: 0px;
@@ -127,25 +124,40 @@ header{
         } 
     }
 } 
-.banner{
-    @media (min-width: 992px)  {
-           @include bg;         
+.bg{
+    position: absolute;
+    inset-inline-end: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 67%;
+    @media (min-width:992px) {
+        height: 110vh;
     }
-    margin-top: -150px;
-    padding-top: 150px;
-    display: flex;
+    @media (min-width:576px) and (max-width:991.98px) { 
+        height: 85vh; 
+         
+    } 
+    @media (max-width:575.98px) {
+        height: 0;      
+    }    
+    @include reverse;
+}
+.banner{
     .banner-img-div {
-        @media (max-width: 991.98px) {
-            @include bg;
-            margin-top: -150px;
-            padding-top: 150px; 
-        } 
-        .banner-img {
-            width: 50%;
+        .banner-img {   
+            height: auto;
             @media (min-width: 992px) {
                 width: 70%;
-                height: auto;    
-            }            
+               height: 80vh;    
+            } 
+            @media (min-width:576px) and (max-width:991.98px) {
+                width: 50%;
+                height: 60vh; 
+            } 
+            @media (max-width:575.98px) {
+                width: 50%;      
+            } 
+            @include reverse;         
         }
     }   
     .banner-text{  
@@ -166,10 +178,6 @@ header{
         }
         @media (min-width: 992px){
             margin-inline-start: auto;
-            [dir="rtl"] & {
-                margin-inline-end: auto;
-                transform: scaleX(-1);
-            }
         }
         @media (max-width: 575.98px){
             padding-inline: .75rem;     
